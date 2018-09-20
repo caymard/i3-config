@@ -1,4 +1,4 @@
-# Personnal i3 configuration
+# Personnal i3 configuration [![Build Status](https://travis-ci.org/caymard/i3-config.svg?branch=master)](https://travis-ci.org/caymard/i3-config)
 
 ## Install
 ```bash
