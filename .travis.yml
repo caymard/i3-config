@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.6"
+# command to install dependencies
+install:
+  - pip install pylint flake8
+# command to run tests
+script:
+  - pylint scripts/*.py
+  - flake --ignore=E501 scripts/*.py

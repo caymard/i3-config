@@ -1,5 +1,5 @@
 # pylint: disable=wildcard-import, unused-wildcard-import, import-error
-API_KEY = None
+FOOTBALL_DATA_API_KEY = None
 
 GITLAB_PRIVATE_TOKEN = None
 

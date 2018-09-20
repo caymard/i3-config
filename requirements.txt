@@ -1,1 +1,4 @@
+python-dateutil
+pytz
+redis
 requests

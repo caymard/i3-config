@@ -6,9 +6,6 @@ from dateutil.parser import parse
 
 from settings import FOOTBALL_DATA_API_KEY
 
-if FOOTBALL_DATA_API_KEY is None:
-    raise ValueError('FOOTBALL_DATA_API_KEY is None, stopping here.')
-
 
 FR_TZ = pytz.timezone('Europe/Paris')
 NOW = datetime.now(FR_TZ)
@@ -45,6 +42,10 @@ def seconds_to_countdown(seconds):
 
 
 def main():
+
+    if FOOTBALL_DATA_API_KEY is None:
+        raise ValueError('FOOTBALL_DATA_API_KEY is None, stopping here.')
+
     request = requests.get(
         "http://api.football-data.org/v1/competitions/467/fixtures",
         headers={
