@@ -7,5 +7,5 @@ install:
 # command to run tests
 script:
   - pylint scripts/*.py
-  - flake --ignore=E501 scripts/*.py
+  - flake8 --ignore=E501 scripts/*.py
   - cd scripts && shellcheck desk_* exit_menu volume *.sh
