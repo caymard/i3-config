@@ -1,0 +1,3 @@
+API_KEY = None
+
+GITLAB_PRIVATE_TOKEN = None

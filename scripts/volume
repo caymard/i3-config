@@ -1,0 +1,4 @@
+#!/bin/bash
+sink=$(pactl list sinks | grep '^Sink #')
+
+~/.config/i3/scripts/volume2 ${sink##*\#}
