@@ -114,7 +114,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "~/.config/i3/scripts/exit_menu"
+bindsym $mod+Shift+e exec "~/.config/i3/scripts/exit_menu.sh"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -214,7 +214,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Multiscreens
-bindsym $mod+Control+ampersand exec "~/.config/i3/scripts/desk_laptop"
-bindsym $mod+Control+eacute exec "~/.config/i3/scripts/desk_upbottom"
-bindsym $mod+Control+quotedbl exec "~/.config/i3/scripts/desk_masterrace"
-bindsym $mod+Control+apostrophe exec "~/.config/i3/scripts/desk_pres"
+bindsym $mod+Control+ampersand exec "~/.config/i3/scripts/desk_laptop.sh"
+bindsym $mod+Control+eacute exec "~/.config/i3/scripts/desk_upbottom.sh"
+bindsym $mod+Control+quotedbl exec "~/.config/i3/scripts/desk_masterrace.sh"
+bindsym $mod+Control+apostrophe exec "~/.config/i3/scripts/desk_pres.sh"
+bindsym $mod+Control+parenleft exec "~/.config/i3/scripts/desk_game.sh"
