@@ -8,5 +8,12 @@ source ~/.venvs/i3/bin/activate
 pip install -Ur requirements.txt
 deactivate
 
+sudo apt update -qq
+sudo apt install --yes \
+	xbacklight \
+	i3 \
+	i3blocks \
+	rofi
+
 sudo cp services/wakelock.service /etc/systemd/system
 sudo systemctl daemon-reload
