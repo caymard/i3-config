@@ -8,4 +8,4 @@ install:
 script:
   - pylint scripts/*.py
   - flake8 --ignore=E501 scripts/*.py
-  - cd scripts && shellcheck desk_* exit_menu *.sh
+  - shellcheck $(find . -name "*.sh")

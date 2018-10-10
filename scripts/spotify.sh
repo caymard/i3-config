@@ -1,4 +1,5 @@
 #!/bin/sh
+# shellcheck disable=SC2034
 SP_VERSION="0.1"
 SP_DEST="org.mpris.MediaPlayer2.spotify"
 SP_PATH="/org/mpris/MediaPlayer2"
@@ -26,6 +27,7 @@ TrackArtist=$(echo "$SPOTIFY_METADATA" | sed -n 's/artist|//p')
 TrackTitle=$(echo "$SPOTIFY_METADATA" | sed -n 's/title|//p')
 
 dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'PlaybackStatus' | grep Playing > /dev/null
+# shellcheck disable=SC2181
 if [ $? -eq 0 ]; then
 	PlaybackStatus="▶"
 else
