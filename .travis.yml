@@ -6,6 +6,6 @@ install:
   - pip install pylint flake8 -r requirements.txt
 # command to run tests
 script:
-  - pylint scripts/*.py
-  - flake8 --ignore=E501 scripts/*.py
+  - pylint $(find . -name "*.py")
+  - flake8 --ignore=E501 $(find . -name "*.py")
   - shellcheck $(find . -name "*.sh")
