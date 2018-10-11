@@ -219,3 +219,6 @@ bindsym $mod+Control+eacute exec "~/.config/i3/scripts/desk_upbottom.sh"
 bindsym $mod+Control+quotedbl exec "~/.config/i3/scripts/desk_masterrace.sh"
 bindsym $mod+Control+apostrophe exec "~/.config/i3/scripts/desk_pres.sh"
 bindsym $mod+Control+parenleft exec "~/.config/i3/scripts/desk_game.sh"
+
+# Init screen config
+exec --no-startup-id "~/.config/i3/scripts/desk_init.sh"
