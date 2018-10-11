@@ -15,5 +15,8 @@ sudo apt install --yes \
 	i3blocks \
 	rofi
 
+mkdir -p ~/.config/rofi
+cp -r rofi/* ~/.config/rofi
+
 sudo cp services/wakelock.service /etc/systemd/system
 sudo systemctl daemon-reload
