@@ -162,13 +162,14 @@ bindsym Control+F9 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.sp
 
 # Wallpaper
 set $wallpaper ~/.config/i3/wallpapers/bali.png
+exec_always --no-startup-id feh --bg-scale $wallpaper
 
 # Lock
-bindsym $mod+Shift+x exec ~/.config/i3/scripts/lock.sh
+set $lockpaper ~/.config/i3/wallpapers/space.png
+bindsym $mod+Shift+x exec ~/.config/i3/scripts/lock.sh $lockpaper
 
 # startup
 exec --no-startup-id compton
-exec_always --no-startup-id feh --bg-scale $wallpaper
 
 # move to screen
 bindsym $mod+o move workspace to output up

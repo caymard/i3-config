@@ -1,2 +1,3 @@
 #!/bin/bash
-i3lock -f -t -i ~/.config/i3/wallpapers/bali.png
+# shellcheck disable=SC2086
+i3lock -f -t -i $1
