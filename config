@@ -187,8 +187,8 @@ bindsym $mod+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 # google chrome
 bindsym $mod+Shift+g exec google-chrome
 bindsym $mod+Shift+y exec "google-chrome --app=\\"https://youtube.com/tv\\""
-bindsym $mod+Shift+t exec "google-chrome --app=\\"https://trello.com\\""
-bindsym $mod+Shift+u exec "google-chrome --app=\\"https://calendar.google.com\\""
+bindsym $mod+Shift+t exec "google-chrome --new-window \\"https://mail.google.com\\" \\"https://trello.com/b/ob4bjUa1/sprint-team-sud\\" \\"https://calendar.google.com\\""
+bindsym $mod+Shift+u exec "subl --new-window"
 bindsym $mod+Shift+s exec "slack"
 
 # window title bar
