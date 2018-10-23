@@ -5,7 +5,7 @@ Description=Lock the screen on resume from suspend
 User=caymard
 Type=forking
 Environment=DISPLAY=:0
-ExecStart=/home/caymard/.config/i3/scripts/lock.sh
+ExecStart=/home/caymard/.config/i3/scripts/lock.sh /home/caymard/.config/i3/wallpapers/space.png
 
 [Install]
 WantedBy=sleep.target suspend.target
