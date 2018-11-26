@@ -6,7 +6,8 @@ from settings import GITLAB_PRIVATE_TOKEN
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Fetch Gitlab API about opened MR.')
-    parser.add_argument('--target', metavar='TARGET', type=str, default='me', help='the target to fetch MR from')
+    parser.add_argument('--target', metavar='TARGET', type=str, default='me',
+                        help='the target to fetch MR from')
     args = parser.parse_args()
 
     if GITLAB_PRIVATE_TOKEN is None:
@@ -18,7 +19,7 @@ if __name__ == '__main__':
         request_params['labels'] = 'SUD'
     elif args.target == 'me':
         request_params['scope'] = 'assigned_to_me'
-    
+
     r = requests.get(
         'https://gitlab.citymeo.fr/api/v4/groups/5/merge_requests',
         headers={
