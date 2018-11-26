@@ -231,10 +231,11 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Multiscreens
 bindsym $mod+Control+ampersand exec "~/.config/i3/scripts/desk_laptop.sh"
-bindsym $mod+Control+eacute exec "~/.config/i3/scripts/desk_upbottom.sh"
+bindsym $mod+Control+eacute exec "~/.config/i3/scripts/desk_leftright.sh"
 bindsym $mod+Control+quotedbl exec "~/.config/i3/scripts/desk_masterrace.sh"
 bindsym $mod+Control+apostrophe exec "~/.config/i3/scripts/desk_pres.sh"
 bindsym $mod+Control+parenleft exec "~/.config/i3/scripts/desk_game.sh"
+bindsym $mod+Control+minus exec "~/.config/i3/scripts/desk_upbottom.sh"
 
 # Init screen config
 exec --no-startup-id "~/.config/i3/scripts/desk_init.sh"
