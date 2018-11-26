@@ -161,11 +161,11 @@ bindsym Control+0x13bd exec dbus-send --print-reply --dest=org.mpris.MediaPlayer
 bindsym Control+F9 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 
 # Wallpaper
-set $wallpaper ~/.config/i3/wallpapers/bali.png
+set $wallpaper ~/.config/i3/wallpapers/sea.png
 exec_always --no-startup-id feh --bg-scale $wallpaper
 
 # Lock
-set $lockpaper ~/.config/i3/wallpapers/space.png
+set $lockpaper ~/.config/i3/wallpapers/sea.png
 bindsym $mod+Shift+x exec ~/.config/i3/scripts/lock.sh $lockpaper
 
 # Sleep
