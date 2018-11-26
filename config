@@ -85,6 +85,18 @@ bindsym $mod+underscore workspace $workspace8
 bindsym $mod+ccedilla workspace $workspace9
 bindsym $mod+agrave workspace $workspace10
 
+# switch to workspace (numpad)
+bindsym $mod+KP_1 workspace $workspace1
+bindsym $mod+KP_2 workspace $workspace2
+bindsym $mod+KP_3 workspace $workspace3
+bindsym $mod+KP_4 workspace $workspace4
+bindsym $mod+KP_5 workspace $workspace5
+bindsym $mod+KP_6 workspace $workspace6
+bindsym $mod+KP_7 workspace $workspace7
+bindsym $mod+KP_8 workspace $workspace8
+bindsym $mod+KP_9 workspace $workspace9
+bindsym $mod+KP_0 workspace $workspace10
+
 # move focused container to workspace
 bindsym $mod+Shift+ampersand move container to workspace $workspace1
 bindsym $mod+Shift+eacute move container to workspace $workspace2
