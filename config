@@ -194,7 +194,7 @@ bindsym $mod+m move workspace to output right
 
 # screenshot
 bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
-bindsym $mod+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
+bindsym --release $mod+Print exec "scrot -s '%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/screenshots'"
 
 # google chrome
 bindsym $mod+Shift+g exec google-chrome
