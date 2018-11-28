@@ -215,13 +215,13 @@ bindsym XF86KbdBrightnessUp exec echo 100 > /sys/class/leds/asus::kbd_backlight/
 bindsym XF86KbdBrightnessDown exec echo 0 > /sys/class/leds/asus::kbd_backlight/brightness
 
 # Pulse Audio controls
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/scripts/pactl_volume.sh M # mute sound
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/scripts/pactl_volume.sh -5% #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/scripts/pactl_volume.sh +5% #increase sound volume
 # legacy F10/11/12 audio control (Sometimes I feel nostalgic and use them)
-bindsym $mod+F10 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym $mod+F12 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym $mod+F10 exec --no-startup-id ~/.config/i3/scripts/pactl_volume.sh M # mute sound
+bindsym $mod+F11 exec --no-startup-id ~/.config/i3/scripts/pactl_volume.sh -5% #decrease sound volume
+bindsym $mod+F12 exec --no-startup-id ~/.config/i3/scripts/pactl_volume.sh +5% #increase sound volume
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
