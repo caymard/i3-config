@@ -20,6 +20,7 @@ bindsym $mod+Shift+a kill
 #bindsym $mod+d exec dmenu_run
 bindsym $mod+d exec rofi -show run -modi run
 bindsym $mod+Shift+d exec rofi -show ssh -modi ssh
+bindsym $mod+j exec /home/caymard/.config/i3/scripts/rofi-emoji.sh
 
 # Navigate to workspaces
 bindsym $mod+Left focus left
