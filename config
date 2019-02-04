@@ -178,7 +178,7 @@ exec_always --no-startup-id feh --bg-scale $wallpaper
 
 # Lock
 set $lockpaper ~/.config/i3/wallpapers/sea.png
-bindsym $mod+Shift+x exec ~/.config/i3/scripts/lock.sh $lockpaper
+bindsym $mod+Shift+x exec ~/.config/i3/scripts/lock.sh
 
 # Sleep
 bindsym $mod+p exec --no-startup-id systemctl suspend
