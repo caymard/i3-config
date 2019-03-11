@@ -164,7 +164,7 @@ bar {
         position top
         font pango:DejaVu Sans Mono, FontAwesome 9
         colors {
-            background #000000
+            background #222222
             separator #757575
         }
 }
