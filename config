@@ -202,10 +202,13 @@ bindsym $mod+Shift+g exec google-chrome
 bindsym $mod+Shift+y exec "google-chrome --app=\\"https://youtube.com/tv\\""
 bindsym $mod+Shift+t exec "google-chrome --new-window \\"https://mail.google.com\\" \\"https://calendar.google.com\\" \\"https://citymeo.quip.com/UwqCAk3EgvCH/SUD-Q1-2019\\"
 bindsym $mod+Shift+u exec "subl --new-window"
-bindsym $mod+Shift+s exec "slack"
+bindsym $mod+Shift+s exec slack
 
 # window title bar
-new_window 1pixel
+#new_window 2pixel
+for_window [class="^.*"] border pixel 2
+gaps inner 15
+bindsym $mod+g gaps inner all toggle 15
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
