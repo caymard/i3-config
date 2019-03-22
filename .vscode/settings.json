@@ -1,0 +1,6 @@
+{
+  "python.envFile": "/home/caymard/.venvs/i3",
+  "python.formatting.provider": "black",
+  "python.venvPath": "/home/caymard/.venvs/i3",
+  "python.pythonPath": "/home/caymard/.venvs/i3/bin/python"
+}

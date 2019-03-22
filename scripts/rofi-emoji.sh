@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC2002,SC2006,SC2046,SC2086,SC2119,SC2120
 #
 #   Use rofi to pick emoji because that's what this
 #   century is about apparently...
@@ -73,7 +74,7 @@ function download() {
 
 function display() {
     emoji=$(cat "$EMOJI_FILE" | grep -v '#' | grep -v '^[[:space:]]*$')
-    line=$(echo "$emoji" | rofi -dmenu -i -p emoji -kb-custom-1 Ctrl+c $@)
+    line=$(echo "$emoji" | rofi -dmenu -i -p emoji -kb-custom-1 Ctrl+c "$@")
     exit_code=$?
 
     line=($line)

@@ -1,27 +1,21 @@
 import requests
 
 STATUS = {
-    'off': {
-        'message': '🔴',
-    },
-    'starting': {
-        'message': '🔺',
-    },
-    'running': {
-        'message': '🔵',
-    },
+    "off": {"message": "🔴"},
+    "starting": {"message": "🔺"},
+    "running": {"message": "🔵"},
 }
 
 try:
-    r = requests.get('http://clement.citymeo.lan/api/management/v2/', timeout=1)
+    r = requests.get("http://clement.citymeo.lan/api/management/v2/", timeout=1)
 except requests.exceptions.ConnectionError:
-    status = 'off'
+    status = "off"
 else:
     if r.status_code == 502:
-        status = 'starting'
+        status = "starting"
     elif r.status_code == 403:
-        status = 'running'
+        status = "running"
     else:
-        status = 'off'
+        status = "off"
 finally:
-    print(STATUS[status]['message'])
+    print(STATUS[status]["message"])
