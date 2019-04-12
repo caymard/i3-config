@@ -200,7 +200,7 @@ bindsym --release $mod+Print exec "scrot -s '%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/sc
 # google chrome
 bindsym $mod+Shift+g exec google-chrome
 bindsym $mod+Shift+y exec "google-chrome --app=\\"https://youtube.com/tv\\""
-bindsym $mod+Shift+t exec "google-chrome --new-window \\"https://mail.google.com\\" \\"https://calendar.google.com\\" \\"https://citymeo.quip.com/UwqCAk3EgvCH/SUD-Q1-2019\\"
+bindsym $mod+Shift+t exec "google-chrome --new-window \\"https://mail.google.com\\" \\"https://calendar.google.com\\"  \\"https://cenareo.atlassian.net/secure/RapidBoard.jspa?rapidView=2\\"
 bindsym $mod+Shift+u exec "subl --new-window"
 bindsym $mod+Shift+s exec slack
 
