@@ -1,6 +1,7 @@
 {
   "python.envFile": "/home/caymard/.venvs/i3",
-  "python.formatting.provider": "black",
+  "python.formatting.provider": "yapf",
+  "python.formatting.yapfArgs": ["--style" ,"facebook"],
   "python.venvPath": "/home/caymard/.venvs/i3",
   "python.pythonPath": "/home/caymard/.venvs/i3/bin/python"
 }

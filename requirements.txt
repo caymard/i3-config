@@ -1,4 +1,6 @@
+flake8
+pylint
 python-dateutil
 pytz
-redis
 requests
+yapf

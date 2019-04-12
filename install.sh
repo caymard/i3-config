@@ -15,6 +15,8 @@ sudo apt install --yes \
 	i3blocks \
 	rofi
 
+echo "⚠ I installed i3, but if you want fancy gaps go install i3-gaps"
+
 mkdir -p ~/.config/rofi
 cp -r rofi/* ~/.config/rofi
 

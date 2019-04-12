@@ -3,10 +3,13 @@ python:
   - "3.6"
 # command to install dependencies
 install:
-  - pip install pylint flake8 black -r requirements.txt
+  - pip install pylint flake8 yapf -r requirements.txt
+before_script:
+  - export PYTHON_FILES=$(find . -name "*.py")
+  - export BASH_FILES=$(find . -name "*.sh")
 # command to run tests
 script:
-  - black --check $(find . -name "*.py")
-  - pylint $(find . -name "*.py")
-  - flake8 --ignore=E501 $(find . -name "*.py")
-  - shellcheck $(find . -name "*.sh")
+  - yapf --style facebook --diff $PYTHON_FILES
+  - pylint $PYTHON_FILES
+  - flake8 --ignore=E501 $PYTHON_FILES
+  - shellcheck $BASH_FILES

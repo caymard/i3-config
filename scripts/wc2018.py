@@ -6,7 +6,6 @@ from dateutil.parser import parse
 
 from settings import FOOTBALL_DATA_API_KEY
 
-
 FR_TZ = pytz.timezone("Europe/Paris")
 NOW = datetime.now(FR_TZ)
 
@@ -19,7 +18,9 @@ def format_fixture(fixture, score=True):
             fixture.get("result").get("goalsAwayTeam") or 0,
             fixture.get("awayTeamName"),
         )
-    return "{} - {}".format(fixture.get("homeTeamName"), fixture.get("awayTeamName"))
+    return "{} - {}".format(
+        fixture.get("homeTeamName"), fixture.get("awayTeamName")
+    )
 
 
 def seconds_to_countdown(seconds):

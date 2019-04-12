@@ -5,7 +5,9 @@ import requests
 from settings import GITLAB_PRIVATE_TOKEN
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Fetch Gitlab API about opened MR.")
+    parser = argparse.ArgumentParser(
+        description="Fetch Gitlab API about opened MR."
+    )
     parser.add_argument(
         "--target",
         metavar="TARGET",
@@ -31,7 +33,9 @@ if __name__ == "__main__":
         request_params["scope"] = "assigned_to_me"
 
     r = requests.get(
-        url, headers={"Private-Token": GITLAB_PRIVATE_TOKEN}, params=request_params
+        url,
+        headers={"Private-Token": GITLAB_PRIVATE_TOKEN},
+        params=request_params
     )
 
     mr_count = int(r.headers.get("X-Total", "?"))
