@@ -11,7 +11,7 @@ if __name__ == "__main__":
     rain_data = [
         datacadran.get("niveauPluie") for datacadran in data.get("dataCadran")
     ]
-    it_will_rain = len([i for i in rain_data if i > 1]) == []
+    it_will_rain = [i for i in rain_data if i > 1] != []
     rain_histogram = [
         {
             1: "▁",
