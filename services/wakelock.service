@@ -3,7 +3,7 @@ Description=Lock the screen on resume from suspend
 
 [Service]
 User=caymard
-Type=forking
+Type=simple
 Environment=DISPLAY=:0
 ExecStart=/home/caymard/.config/i3/scripts/lock.sh
 
