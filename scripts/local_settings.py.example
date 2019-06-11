@@ -1,3 +1,5 @@
 API_KEY = None
 
 GITLAB_PRIVATE_TOKEN = None
+
+SNCF_API_KEY = None
