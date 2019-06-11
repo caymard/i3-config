@@ -1,7 +1,12 @@
 {
   "python.envFile": "/home/caymard/.venvs/i3",
-  "python.formatting.provider": "yapf",
-  "python.formatting.yapfArgs": ["--style" ,"facebook"],
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/home/caymard/.venvs/i3/bin/black",
+  "python.formatting.blackArgs": ["--config", "${workspaceFolder}/i3.toml"],
   "python.venvPath": "/home/caymard/.venvs/i3",
-  "python.pythonPath": "/home/caymard/.venvs/i3/bin/python"
+  "python.pythonPath": "/home/caymard/.venvs/i3/bin/python",
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+    100
+  ]
 }

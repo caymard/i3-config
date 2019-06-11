@@ -70,9 +70,9 @@ set $workspace9 "9"
 set $workspace10 "10"
 
 # screens
-set $screen1 "eDP1"
-set $screen2 "HDMI2"
-set $screen3 "DP1"
+set $screen1 "DP1"
+set $screen2 "eDP1"
+set $screen3 "HDMI2"
 
 # switch to workspace
 bindsym $mod+ampersand workspace $workspace1
@@ -111,16 +111,16 @@ bindsym $mod+Shift+ccedilla move container to workspace $workspace9
 bindsym $mod+Shift+agrave move container to workspace $workspace10
 
 # workspace default monitors
-workspace $workspace1 output $screen2
-workspace $workspace2 output $screen2
-workspace $workspace3 output $screen2
-workspace $workspace4 output $screen2
-workspace $workspace5 output $screen2
-workspace $workspace6 output $screen3
-workspace $workspace7 output $screen3
-workspace $workspace8 output $screen3
+workspace $workspace1 output $screen1
+workspace $workspace2 output $screen1
+workspace $workspace3 output $screen1
+workspace $workspace4 output $screen1
+workspace $workspace5 output $screen1
+workspace $workspace6 output $screen1
+workspace $workspace7 output $screen1
+workspace $workspace8 output $screen1
 workspace $workspace9 output $screen3
-workspace $workspace10 output $screen1
+workspace $workspace10 output $screen2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

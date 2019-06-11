@@ -1,15 +1,9 @@
 import requests
 
 STATUS = {
-    "off": {
-        "message": "🔴"
-    },
-    "starting": {
-        "message": "🔺"
-    },
-    "running": {
-        "message": "🔵"
-    },
+    "off": {"message": "🔴"},
+    "starting": {"message": "🔺"},
+    "running": {"message": "🔵"},
 }
 
 try:

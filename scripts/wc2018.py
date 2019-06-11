@@ -18,9 +18,7 @@ def format_fixture(fixture, score=True):
             fixture.get("result").get("goalsAwayTeam") or 0,
             fixture.get("awayTeamName"),
         )
-    return "{} - {}".format(
-        fixture.get("homeTeamName"), fixture.get("awayTeamName")
-    )
+    return "{} - {}".format(fixture.get("homeTeamName"), fixture.get("awayTeamName"))
 
 
 def seconds_to_countdown(seconds):

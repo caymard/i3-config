@@ -3,4 +3,4 @@ pylint
 python-dateutil
 pytz
 requests
-yapf
+black
