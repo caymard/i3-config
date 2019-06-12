@@ -40,7 +40,9 @@ def main():
         if not "Toulouse" in departure.get("display_informations").get("direction"):
             continue
         pretty_date = departure_datetime.strftime("%H:%M")
-        pretty_late = "(+{})".format((departure_datetime - base_departure_datetime).seconds)
+        pretty_late = "(+{})".format(
+            round((departure_datetime - base_departure_datetime).seconds / 60)
+        )
         pretty_dates.append(pretty_date + pretty_late)
         sys.stderr.write("{} : {}\n".format(direction, pretty_date))
         if len(pretty_dates) >= RESULTS_MAX:
