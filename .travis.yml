@@ -7,7 +7,7 @@ install:
 before_script:
   - export BASH_FILES=$(find . -name "*.sh")
   - export PYTHON_FILES=$(find . -name "*.py")
-# command to run tests
+# command to run  tests
 script:
   - black --config i3.toml .
   - pylint $PYTHON_FILES
