@@ -1,10 +1,6 @@
 import requests
 
-STATUS = {
-    "off": {"message": "🔴"},
-    "starting": {"message": "🔺"},
-    "running": {"message": "🔵"},
-}
+STATUS = {"off": {"message": "🔴"}, "starting": {"message": "🔺"}, "running": {"message": "🔵"}}
 
 try:
     r = requests.get("http://clement.citymeo.lan/api/management/v2/", timeout=1)

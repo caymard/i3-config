@@ -7,11 +7,7 @@ from settings import GITLAB_PRIVATE_TOKEN
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fetch Gitlab API about opened MR.")
     parser.add_argument(
-        "--target",
-        metavar="TARGET",
-        type=str,
-        default="me",
-        help="the target to fetch MR from",
+        "--target", metavar="TARGET", type=str, default="me", help="the target to fetch MR from"
     )
     args = parser.parse_args()
 
@@ -30,9 +26,7 @@ if __name__ == "__main__":
     elif args.target == "me":
         request_params["scope"] = "assigned_to_me"
 
-    r = requests.get(
-        url, headers={"Private-Token": GITLAB_PRIVATE_TOKEN}, params=request_params
-    )
+    r = requests.get(url, headers={"Private-Token": GITLAB_PRIVATE_TOKEN}, params=request_params)
 
     mr_count = int(r.headers.get("X-Total", "?"))
     label = "📪" if mr_count == 0 else "📬"

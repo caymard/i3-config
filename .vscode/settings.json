@@ -5,6 +5,9 @@
   "python.formatting.blackArgs": ["--config", "${workspaceFolder}/i3.toml"],
   "python.venvPath": "/home/caymard/.venvs/i3",
   "python.pythonPath": "/home/caymard/.venvs/i3/bin/python",
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "/home/caymard/.venvs/i3/bin/flake8",
+  "python.linting.flake8Args": ["--ignore", "E501"],
   "editor.formatOnSave": true,
   "editor.rulers": [
     100

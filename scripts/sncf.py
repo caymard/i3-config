@@ -37,7 +37,7 @@ def main():
 
         if not valid_departure(departure_date_time, today):
             continue
-        if not "Toulouse" in departure.get("display_informations").get("direction"):
+        if "Toulouse" not in departure.get("display_informations").get("direction"):
             continue
         pretty_date = departure_datetime.strftime("%H:%M")
         pretty_late = "(+{})".format(

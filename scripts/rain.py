@@ -8,9 +8,7 @@ if __name__ == "__main__":
 
     rain_data = [datacadran.get("niveauPluie") for datacadran in data.get("dataCadran")]
     it_will_rain = [i for i in rain_data if i > 1] != []
-    rain_histogram = [
-        {1: "▁", 2: "▃", 3: "▄", 4: "▅", 5: "█"}.get(rd, "?") for rd in rain_data
-    ]
+    rain_histogram = [{1: "▁", 2: "▃", 3: "▄", 4: "▅", 5: "█"}.get(rd, "?") for rd in rain_data]
 
     umbrella = "☔" if it_will_rain else "🌂"
     print(umbrella + "".join(rain_histogram))
