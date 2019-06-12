@@ -1,23 +1,14 @@
-stages:
-  - lint
-
-jobs:
-  python:
-    language: python
-    python:
-      - "3.6"
-    # command to install dependencies
-    install:
-      - pip install pylint flake8 black -r requirements.txt
-    before_script:
-      - export BASH_FILES=$(find . -name "*.sh")
-    # command to run tests
-    script:
-      - black --config i3.toml .
-      - pylint $PYTHON_FILES
-      - flake8 --ignore=E501 .
-      - shellcheck $BASH_FILES
-  shell:
-    language: shell
-    script:
-      - shellcheck $(find . -name "*.sh")
+language: python
+python:
+  - "3.6"
+# command to install dependencies
+install:
+  - pip install -U pip -r requirements.txt
+before_script:
+  - export BASH_FILES=$(find . -name "*.sh")
+# command to run tests
+script:
+  - black --config i3.toml .
+  - pylint $PYTHON_FILES
+  - flake8 --ignore=E501 .
+  - shellcheck $BASH_FILES
