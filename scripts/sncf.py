@@ -1,3 +1,19 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+
+The ``sncf`` module
+===================
+
+Get next departures Labège-Innopole -> Toulouse Matabiau.
+
+Usage
+-----
+python sncf.py
+python sncf.py --next 5
+
+"""
+import argparse
 from datetime import datetime
 import sys
 
@@ -8,7 +24,6 @@ from settings import SNCF_API_KEY
 
 API_URL = "https://api.sncf.com/v1/coverage/sncf/stop_areas/{}/departures"
 INNOPOLE_ID = "stop_area:OCE:SA:87612002"
-RESULTS_MAX = 2
 
 
 def valid_departure(departure, date):
@@ -16,6 +31,11 @@ def valid_departure(departure, date):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--next", type=int, help="number of next trains", default=2)
+    args = parser.parse_args()
+    next_departures_number = args.next
+
     today = datetime.now().strftime("%Y%m%dT%H%M%S")
     payload = {"q": today}
 
@@ -45,7 +65,7 @@ def main():
         )
         pretty_dates.append(pretty_date + pretty_late)
         sys.stderr.write("{} : {}\n".format(direction, pretty_date))
-        if len(pretty_dates) >= RESULTS_MAX:
+        if len(pretty_dates) >= next_departures_number:
             break
 
     sys.stdout.write(" ".join(pretty_dates) + "\n")
