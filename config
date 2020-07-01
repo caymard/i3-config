@@ -174,11 +174,11 @@ bindsym Control+0x13bd exec dbus-send --print-reply --dest=org.mpris.MediaPlayer
 bindsym Control+F9 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 
 # Wallpaper
-set $wallpaper ~/.config/i3/wallpapers/sea.png
+set $wallpaper ~/.config/i3/wallpapers/deer.png
 exec_always --no-startup-id feh --bg-scale $wallpaper
 
 # Lock
-set $lockpaper ~/.config/i3/wallpapers/sea.png
+set $lockpaper ~/.config/i3/wallpapers/deer.png
 bindsym $mod+Shift+x exec ~/.config/i3/scripts/lock.sh
 
 # Sleep
@@ -200,15 +200,6 @@ bindsym --release $mod+Print exec "scrot -s '%Y-%m-%d-%H%M%S.png' -e 'mv $f ~/sc
 # google chrome
 bindsym $mod+Shift+g exec google-chrome
 bindsym $mod+Shift+y exec "google-chrome --app=\\"https://youtube.com/tv\\""
-bindsym $mod+Shift+t exec "google-chrome --new-window \\"https://mail.google.com\\" \\"https://calendar.google.com\\"  \\"https://cenareo.atlassian.net/secure/RapidBoard.jspa?rapidView=2\\"
-bindsym $mod+Shift+u exec "subl --new-window"
-bindsym $mod+Shift+s exec slack
-
-# window title bar
-#new_window 2pixel
-for_window [class="^.*"] border pixel 2
-gaps inner 15
-bindsym $mod+g gaps inner all toggle 15
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
@@ -244,3 +235,9 @@ bindsym $mod+Control+egrave exec "~/.config/i3/scripts/desk_home.sh"
 
 # Init screen config
 exec --no-startup-id "~/.config/i3/scripts/desk_init.sh"
+
+# i3-gaps
+for_window [class=".*"] border pixel 1
+set $gapsize 10
+gaps inner $gapsize
+bindsym $mod+g gaps inner all toggle $gapsize
